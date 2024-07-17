@@ -1,7 +1,17 @@
-import { Canister, query, text } from 'azle';
+import { Server } from 'azle';
+import express from 'express';
+import cors from 'cors';
+import mongoose from 'mongoose';
 
-export default Canister({
-    greet: query([text], text, (name) => {
-        return `Hello, ${name}!`;
-    })
+export default Server(()=>{
+
+    const app = express();
+
+
+//app.use(app.cors());
+
+return app.listen();
+
+
 })
+
